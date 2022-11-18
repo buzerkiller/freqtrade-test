@@ -3,7 +3,7 @@
     "max_open_trades": 3,
     "stake_currency": "USDT",
     "stake_amount": "unlimited",
-    "tradable_balance_ratio": 0.99,
+    "tradable_balance_ratio": 0.1,
     "fiat_display_currency": "USD",
     "dry_run": true,
     "dry_run_wallet": 1000,
@@ -32,20 +32,32 @@
         "order_book_top": 1
     },
     "exchange": {
-        "name": "binance",
+        "name": "okx",
         "key": "",
         "secret": "",
         "ccxt_config": {},
         "ccxt_async_config": {},
         "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "LTC/USDT",
+            "DOT/USDT",
+            "ADA/USDT",
+            "XRP/USDT",
+            "TRX/USDT",
+            "LINK/USDT"
         ],
         "pair_blacklist": [
-            "BNB/.*"
+            "BNB/.*",
+            "BCH/USDT",
+            "EOS/USDT",
+            "ETC/USDT",
+            "FIL/USDT"
         ]
     },
     "pairlists": [
         {
-            "method": "VolumePairList",
+            "method": "StaticPairList",
             "number_assets": 20,
             "sort_key": "quoteVolume",
             "min_value": 0,
